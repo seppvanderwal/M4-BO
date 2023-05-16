@@ -37,4 +37,10 @@ public class SelectionScreen : MonoBehaviour
         //A.Stop();// stopt het muziek
     }
 
+    public void Shop()
+    {
+        SceneManager.LoadScene(1);
+        //A.Stop();// stopt het muziek
+    }
+
 }
