@@ -224,8 +224,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> main
 =======
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 >>>>>>> main
@@ -239,6 +243,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &456354386
 GameObject:
@@ -9866,6 +9871,8 @@ ParticleSystem:
     vectorLabel1_3: W
 =======
 >>>>>>> main
+=======
+>>>>>>> main
 --- !u!1 &533516079
 GameObject:
   m_ObjectHideFlags: 0
@@ -9893,7 +9900,11 @@ Transform:
   m_GameObject: {fileID: 533516079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -4.42, y: -2.13, z: 0}
+=======
+  m_LocalPosition: {x: -4.42, y: -2.24, z: 0}
+>>>>>>> main
 =======
   m_LocalPosition: {x: -4.42, y: -2.24, z: 0}
 >>>>>>> main
@@ -9971,8 +9982,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> main
 =======
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 >>>>>>> main
@@ -10087,8 +10102,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> main
 =======
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 >>>>>>> main
@@ -10161,8 +10180,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> main
 =======
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 >>>>>>> main
@@ -10191,6 +10214,7 @@ Transform:
   m_Father: {fileID: 2132510210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &822370270
 GameObject:
@@ -10407,6 +10431,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
 >>>>>>> main
+=======
+>>>>>>> main
 --- !u!1 &992508037
 GameObject:
   m_ObjectHideFlags: 0
@@ -10420,10 +10446,16 @@ GameObject:
   - component: {fileID: 992508039}
   - component: {fileID: 992508038}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 992508043}
   - component: {fileID: 992508044}
   m_Layer: 0
   m_Name: laika
+=======
+  - component: {fileID: 992508042}
+  m_Layer: 0
+  m_Name: player
+>>>>>>> main
 =======
   - component: {fileID: 992508042}
   m_Layer: 0
@@ -10454,7 +10486,11 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_CollisionDetection: 0
+=======
+  m_CollisionDetection: 1
+>>>>>>> main
 =======
   m_CollisionDetection: 1
 >>>>>>> main
@@ -10527,8 +10563,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> main
 =======
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 >>>>>>> main
@@ -10550,6 +10590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992508037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_LocalPosition: {x: -7.25, y: -2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -10579,6 +10620,8 @@ MonoBehaviour:
   EndVFX: {fileID: 2093330328}
 --- !u!114 &992508044
 =======
+=======
+>>>>>>> main
   m_LocalPosition: {x: -10.19, y: -2.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10587,6 +10630,9 @@ MonoBehaviour:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &992508042
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10600,6 +10646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &1012415181
 GameObject:
@@ -15451,6 +15498,10 @@ ParticleSystem:
   direction: 0
   rb: {fileID: 0}
 >>>>>>> main
+=======
+  direction: 0
+  rb: {fileID: 0}
+>>>>>>> main
 --- !u!1 &1215512846
 GameObject:
   m_ObjectHideFlags: 0
@@ -15552,8 +15603,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> main
 =======
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 >>>>>>> main
@@ -15668,8 +15723,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
+=======
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+>>>>>>> main
 =======
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
 >>>>>>> main
