@@ -89,9 +89,7 @@ public class Laser : MonoBehaviour
             }
         }
         
-       
-       
-            for (int i = 0; i < EndVFX.transform.childCount; i++)
+        for (int i = 0; i < EndVFX.transform.childCount; i++)
             {
                 var ps = EndVFX.transform.GetChild(i).GetComponent<ParticleSystem>();
                 if (ps != null)
