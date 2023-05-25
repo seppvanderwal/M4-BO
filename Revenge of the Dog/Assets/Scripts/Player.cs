@@ -10,6 +10,10 @@ public class Player : MonoBehaviour
     public float speed = 5f;
     private float direction = 0f;
 
+    private float inputHorizontal;
+    private float inputVertical;
+    private bool facingRight = true;
+
     private Rigidbody2D rb;
 
 
@@ -49,5 +53,30 @@ public class Player : MonoBehaviour
             collision.gameObject.SetActive(false);
             ScoreManager.instance.AddPoint(this);  
         }
+    }
+
+    private void FixedUpdate()
+    {
+        inputHorizontal = Input.GetAxisRaw("Horizontal");
+        inputVertical = Input.GetAxisRaw("Vertical");
+
+        if (inputHorizontal > 0)
+        {
+            Flip();
+        }
+
+        if (inputHorizontal < 0)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        Vector3 currentscale = gameObject.transform.localScale;
+        currentscale.x *= -1;
+        gameObject.transform.localScale = currentscale;
+
+        facingRight = !facingRight;
     }
 }
