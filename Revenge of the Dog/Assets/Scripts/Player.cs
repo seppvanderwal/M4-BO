@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
-public class playerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public float speed = 5f;
     private float direction = 0f;
-    
+
     private Rigidbody2D rb;
 
 
@@ -30,13 +33,21 @@ public class playerMovement : MonoBehaviour
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
-        }   
+        }
 
-        if(Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f )
+        if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             float force = 5f;
             rb.velocity = Vector2.up * force;
         }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Bone")
+        { 
+            collision.gameObject.SetActive(false);
+            ScoreManager.instance.AddPoint(this);  
+        }
     }
 }
