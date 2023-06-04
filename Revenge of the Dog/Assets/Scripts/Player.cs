@@ -7,19 +7,29 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public int maxHealth = 3;
+    public int health;
+
+
     public float speed = 5f;
     private float direction = 0f;
 
     private float inputHorizontal;
     private float inputVertical;
-    private bool facingRight = true;
 
+    private Animator anim;
+    private SpriteRenderer s;
     private Rigidbody2D rb;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        s = GetComponent<SpriteRenderer>();
+        anim= GetComponent<Animator>();
+
+
+        health = maxHealth;
     }
 
     void Update()
@@ -43,8 +53,33 @@ public class Player : MonoBehaviour
         {
             float force = 5f;
             rb.velocity = Vector2.up * force;
+            
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("Jump");
+            anim.ResetTrigger("run");
+            
+        }
+        else
+        {
+            anim.SetTrigger("run");
+            
+        }
+
+        Sprite();
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if(health <= 0)
+        {
+            Destroy(gameObject);
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -55,28 +90,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Sprite()
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
 
         if (inputHorizontal > 0)
         {
-            Flip();
+            s.flipX= false;
         }
 
         if (inputHorizontal < 0)
         {
-            Flip();
+            s.flipX= true;
         }
-    }
-
-    void Flip()
-    {
-        Vector3 currentscale = gameObject.transform.localScale;
-        currentscale.x *= -1;
-        gameObject.transform.localScale = currentscale;
-
-        facingRight = !facingRight;
     }
 }
