@@ -7,15 +7,20 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject deathLocation;
+
     public int maxHealth = 3;
     public int health;
-
 
     public float speed = 5f;
     private float direction = 0f;
 
     private float inputHorizontal;
     private float inputVertical;
+
+    //Timer
+    float delay = 3.0f;
+    private float timer = 0.0f;
 
     private Animator anim;
     private SpriteRenderer s;
@@ -51,7 +56,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
-            float force = 5f;
+            float force = 7f;
             rb.velocity = Vector2.up * force;
             
         }
@@ -68,15 +73,36 @@ public class Player : MonoBehaviour
         }
 
         Sprite();
+        if (health <= 0)
+        {
+            timer += Time.deltaTime;
+
+            if (timer > delay)
+            {
+                SceneManager.LoadScene(6);
+            }
+        }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
 
-        if(health <= 0)
+        if (health == 2)
         {
-            Destroy(gameObject);
+            anim.SetTrigger("isDamaged");
+            Debug.Log("help");
+        }
+        if(health == 1)
+        {
+            anim.SetTrigger("isDamaged");
+        }
+        if(health == 0)
+        {
+            gameObject.transform.localScale= new Vector3( 0.8f, 0.8f, 0.8f);
+            gameObject.transform.position = deathLocation.transform.position;
+            speed = 0;
+            anim.SetTrigger("isDead");
         }
     }
 
