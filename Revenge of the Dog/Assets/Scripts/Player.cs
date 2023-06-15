@@ -40,14 +40,16 @@ public class Player : MonoBehaviour
     void Update()
     {
         direction = Input.GetAxis("Horizontal");
-
+        //Walking
         if (direction > 0f)
         {
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+            anim.SetTrigger("run");
         }
         else if (direction < 0f)
         {
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+            anim.SetTrigger("run");
         }
         else
         {
@@ -60,19 +62,19 @@ public class Player : MonoBehaviour
             rb.velocity = Vector2.up * force;
             
         }
+        //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("Jump");
             anim.ResetTrigger("run");
-            
         }
         else
         {
-            anim.SetTrigger("run");
-            
+            anim.SetTrigger("Idle");   
         }
 
         Sprite();
+        //Health system
         if (health <= 0)
         {
             timer += Time.deltaTime;
