@@ -45,15 +45,18 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
             anim.SetTrigger("run");
+            
         }
         else if (direction < 0f)
         {
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
-            anim.SetTrigger("run");
+            //anim.SetTrigger("run");
+
         }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
+            anim.SetTrigger("Idle");
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
@@ -68,10 +71,7 @@ public class Player : MonoBehaviour
             anim.SetTrigger("Jump");
             anim.ResetTrigger("run");
         }
-        else
-        {
-            anim.SetTrigger("Idle");   
-        }
+        
 
         Sprite();
         //Health system
@@ -84,8 +84,14 @@ public class Player : MonoBehaviour
                 SceneManager.LoadScene(6);
             }
         }
+        IdleSwitch();
     }
 
+
+    void IdleSwitch()
+    {    
+            anim.SetInteger("IdleSwitch", Random.Range(0,10));
+    }
     public void TakeDamage(int damage)
     {
         health -= damage;
