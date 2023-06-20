@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 204a30e7014b0324f929008fdb1db6a4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - attackPrefab: {fileID: 6188611399527874982, guid: dfe2a0f971d28eb45a913f48b60aa8b0, type: 3}
+  - attackSpawnPoint: {instanceID: 0}
+  - laika: {fileID: 5595130471095782981, guid: dda1049fad2905841a1787f40a1d9280, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

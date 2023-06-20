@@ -30,18 +30,18 @@ public class Laser : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && canShoot == true)
+        if (Input.GetButtonDown("Fire2") && canShoot == true)
         {
             EnableLaser();
            
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire2"))
         {
             UpdateLaser();
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire2"))
         {
             canShoot= false;
             DisableLaser();
