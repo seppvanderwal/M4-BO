@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bone
+<<<<<<< HEAD
+  - boss
+=======
+>>>>>>> Gino-Dev
   layers:
   - Default
   - TransparentFX

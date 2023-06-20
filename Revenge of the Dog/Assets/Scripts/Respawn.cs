@@ -9,7 +9,7 @@ public class Respawn : MonoBehaviour
     {
         if (collision.tag == "Respawn")
         {
-            transform.position = (new Vector2(-13, -2));
+            transform.position = (new Vector2(-7, -2));
         }
 
     }
