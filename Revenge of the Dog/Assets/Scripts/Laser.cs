@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -13,37 +14,57 @@ public class Laser : MonoBehaviour
     public Transform firePoint;
     public GameObject StartVFX;
     public GameObject EndVFX;
+    public float cooldown;
+    public float lastShot;
 
     private List<ParticleSystem> particles = new List<ParticleSystem>();
+    private bool canShoot = true;
 
     void Start()
-    {   
+    {
+        
         FillLists();
         DisableLaser();
+        canShoot = true;
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire2") && canShoot == true)
         {
             EnableLaser();
+           
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire2"))
         {
             UpdateLaser();
         }
 
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire2"))
         {
+            canShoot= false;
             DisableLaser();
+            
         }
 
         
 
     }
+ 
+    IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(1f);
+        canShoot = true;
+    }
+    
         void EnableLaser()
         {
+        if (Time.time - lastShot < cooldown)
+        {
+            return;
+        }
+        lastShot = Time.time;
             lineRenderer.enabled = true;
 
         for (int i = 0; i < particles.Count; i++)
@@ -76,7 +97,8 @@ public class Laser : MonoBehaviour
 
         for (int i = 0; i < particles.Count; i++)
             particles[i].Stop();
-    }
+            StartCoroutine(Cooldown());
+        }
 
         void FillLists()
         {
