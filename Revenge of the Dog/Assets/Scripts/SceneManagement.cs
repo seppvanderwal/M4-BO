@@ -22,10 +22,7 @@ public class SceneManagement : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(2);
-            
+            SceneManager.LoadScene(1);
         }
-        
-        
     }
 }

@@ -7,44 +7,113 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public GameObject deathLocation;
+
+    public int maxHealth = 3;
+    public int health;
+
     public float speed = 5f;
     private float direction = 0f;
 
     private float inputHorizontal;
     private float inputVertical;
-    private bool facingRight = true;
 
+    //Timer
+    float delay = 3.0f;
+    private float timer = 0.0f;
+
+    private Animator anim;
+    private SpriteRenderer s;
     private Rigidbody2D rb;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        s = GetComponent<SpriteRenderer>();
+        anim= GetComponent<Animator>();
+
+
+        health = maxHealth;
     }
 
     void Update()
     {
         direction = Input.GetAxis("Horizontal");
-
+        //Walking
         if (direction > 0f)
         {
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+            anim.SetTrigger("run");
+            
         }
         else if (direction < 0f)
         {
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+            //anim.SetTrigger("run");
+
         }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
+            anim.SetTrigger("Idle");
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
-            float force = 5f;
+            float force = 7f;
             rb.velocity = Vector2.up * force;
+            
+        }
+        //Jumping
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("Jump");
+            anim.ResetTrigger("run");
+        }
+        
+
+        Sprite();
+        //Health system
+        if (health <= 0)
+        {
+            timer += Time.deltaTime;
+
+            if (timer > delay)
+            {
+                SceneManager.LoadScene(6);
+            }
+        }
+        IdleSwitch();
+    }
+
+
+    void IdleSwitch()
+    {    
+            anim.SetInteger("IdleSwitch", Random.Range(0,10));
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health == 2)
+        {
+            anim.SetTrigger("isDamaged");
+            Debug.Log("help");
+        }
+        if(health == 1)
+        {
+            anim.SetTrigger("isDamaged");
+        }
+        if(health == 0)
+        {
+            gameObject.transform.localScale= new Vector3( 0.8f, 0.8f, 0.8f);
+            gameObject.transform.position = deathLocation.transform.position;
+            speed = 0;
+            anim.SetTrigger("isDead");
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -55,28 +124,19 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Sprite()
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
 
         if (inputHorizontal > 0)
         {
-            Flip();
+            s.flipX= false;
         }
 
         if (inputHorizontal < 0)
         {
-            Flip();
+            s.flipX= true;
         }
-    }
-
-    void Flip()
-    {
-        Vector3 currentscale = gameObject.transform.localScale;
-        currentscale.x *= -1;
-        gameObject.transform.localScale = currentscale;
-
-        facingRight = !facingRight;
     }
 }

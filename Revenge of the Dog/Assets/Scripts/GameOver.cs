@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public GameObject UI;
+    public GameObject deathScreen;
+    
     // Start is called before the first frame update
 
     public void Setup()
     {
-
-        //ScoreManager.instance.UpdatePoint(); //is voor de punten toevoeging aan het Game Over scherm
+        deathScreen.SetActive(true);
+        UI.SetActive(false);
     }
     //deze laden de specifieke scenes
     public void RestartButton()
@@ -22,10 +25,5 @@ public class GameOver : MonoBehaviour
     public void ExitButton()
     {
         SceneManager.LoadScene(0); //brengt je naar het start scherm
-    }
-
-    public void gameOver()
-    {
-
     }
 }
