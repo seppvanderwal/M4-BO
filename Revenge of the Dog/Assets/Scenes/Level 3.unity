@@ -9875,7 +9875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 176ec9d166d01a5479a0d30537999b08, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 176ec9d166d01a5479a0d30537999b08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10197,7 +10197,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &915164308
@@ -10273,7 +10273,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992508037
 GameObject:
@@ -10431,6 +10431,8 @@ MonoBehaviour:
   firePoint: {fileID: 1723490767}
   StartVFX: {fileID: 842265811}
   EndVFX: {fileID: 2093330328}
+  cooldown: 0
+  lastShot: 0
 --- !u!114 &992508044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15570,7 +15572,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 0.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1811263977
