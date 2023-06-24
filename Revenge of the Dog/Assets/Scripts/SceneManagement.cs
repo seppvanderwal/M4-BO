@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+    public GameObject completionUI;
+    public GameObject boneUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,7 @@ public class SceneManagement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
-        {
-            SceneManager.LoadScene(1);
-        }
+        completionUI.SetActive(true);
+        boneUI.SetActive(false);
     }
 }

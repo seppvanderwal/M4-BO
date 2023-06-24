@@ -31,4 +31,10 @@ public class ScoreManager : MonoBehaviour
         score++;
         scoreText.text = score.ToString("0");
     }
+
+    public void GoldenBone(Player player)
+    {
+        score += 5;
+        scoreText.text = score.ToString("0");
+    }
 }

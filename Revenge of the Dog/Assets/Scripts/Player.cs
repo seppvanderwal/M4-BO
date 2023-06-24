@@ -122,6 +122,11 @@ public class Player : MonoBehaviour
             collision.gameObject.SetActive(false);
             ScoreManager.instance.AddPoint(this);  
         }
+        if(collision.tag == "GoldenBone")
+        {
+            collision.gameObject.SetActive(false);
+            ScoreManager.instance.GoldenBone(this);
+        }
     }
 
     private void Sprite()
