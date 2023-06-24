@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    
+    public GameObject respawn;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Respawn")
         {
-            transform.position = (new Vector2(-7, -2));
+            transform.position = respawn.transform.position;
         }
 
     }
