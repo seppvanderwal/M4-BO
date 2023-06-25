@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
     //deze laden de specifieke scenes
     public void RestartButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // laat de scene opnieuw beginnen
+        SceneManager.LoadScene(1); // laat de scene opnieuw beginnen
     }
 
     public void ExitButton()
