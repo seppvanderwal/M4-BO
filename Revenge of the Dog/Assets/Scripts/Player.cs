@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     public GameObject deathLocation;
 
+    public GameObject[] hearts;
     public int maxHealth = 3;
     public int health;
 
@@ -99,17 +100,22 @@ public class Player : MonoBehaviour
         if (health == 2)
         {
             anim.SetTrigger("isDamaged");
+            Destroy(hearts[1]);
             Debug.Log("help");
+
         }
         if(health == 1)
         {
             anim.SetTrigger("isDamaged");
+            Destroy(hearts[0]);
         }
         if(health == 0)
         {
             gameObject.transform.localScale= new Vector3( 0.8f, 0.8f, 0.8f);
             gameObject.transform.position = deathLocation.transform.position;
             speed = 0;
+            Destroy(hearts[2]);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             anim.SetTrigger("isDead");
         }
     }
