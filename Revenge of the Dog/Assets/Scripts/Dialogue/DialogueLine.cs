@@ -11,7 +11,7 @@ namespace DialogueSystem
         [Header ("Text Options")]
         [SerializeField] private string input;
         [SerializeField] private Color textColor;
-        //[SerializeField] private Font textFont;
+        [SerializeField] private Font textFont;
 
         [Header("Time parameters")]
         [SerializeField] private float delay;
@@ -35,7 +35,7 @@ namespace DialogueSystem
 
         private void Start()
         {
-            StartCoroutine(WriteText(input, textHolder, textColor, delay, sound, delayBetweenLines));
+            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines));
         }
     }
 }
