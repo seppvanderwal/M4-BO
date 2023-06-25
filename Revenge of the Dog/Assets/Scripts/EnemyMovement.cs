@@ -20,12 +20,12 @@ public class EnemyMovement : MonoBehaviour
         {
             if(transform.position.x > playerTransform.position.x)
             {
-                transform.localScale= new Vector3(1,1,1);
+                transform.localScale= new Vector3(2.5f,2.5f,1);
                 transform.position += Vector3.left * moveSpeed * Time.deltaTime;
             }
             if (transform.position.x < playerTransform.position.x)
             {
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(-2.5f, 2.5f, 1);
                 transform.position += Vector3.right * moveSpeed * Time.deltaTime;
 
             }
@@ -42,7 +42,7 @@ public class EnemyMovement : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, patrolPoints[0].position) < 2f)
                 {
-                    transform.localScale = new Vector3(1, 1, 1);
+                    transform.localScale = new Vector3(2.5f, 2.5f, 1);
                     patrolDestination = 1;
                 }
             }
@@ -52,7 +52,7 @@ public class EnemyMovement : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, patrolPoints[1].position) < 2f)
                 {
-                    transform.localScale = new Vector3(-1, 1, 1);
+                    transform.localScale = new Vector3(-2.5f, 2.5f, 1);
                     patrolDestination = 0;
                 }
             }

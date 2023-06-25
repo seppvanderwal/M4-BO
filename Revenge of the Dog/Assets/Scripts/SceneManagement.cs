@@ -23,6 +23,6 @@ public class SceneManagement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D coll)
     {
         completionUI.SetActive(true);
-        boneUI.SetActive(false);
+        boneUI.SetActive(false); 
     }
 }

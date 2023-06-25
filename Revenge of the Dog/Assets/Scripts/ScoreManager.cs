@@ -7,9 +7,10 @@ using UnityEngine.SocialPlatforms.Impl;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
+    public TextMeshProUGUI scoreText;
     string scoreKey = "score";
     public int score;
-    public TextMeshProUGUI scoreText;
+    
 
     public int CurrentScore { get; set; }
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class ScoreManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString("0");
+        
     }
 
     public void GoldenBone(Player player)
