@@ -9,7 +9,7 @@ namespace DialogueSystem
         private Text textHolder;
 
         [Header ("Text Options")]
-        [SerializeField] private string input;
+        [SerializeField] private string[] input;
         [SerializeField] private Color textColor;
         [SerializeField] private Font textFont;
 
@@ -35,7 +35,7 @@ namespace DialogueSystem
 
         private void Start()
         {
-            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines));
+            StartCoroutine(WriteText(input[0], textHolder, textColor, textFont, delay, sound, delayBetweenLines));
         }
     }
 }
