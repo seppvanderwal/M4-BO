@@ -97,17 +97,15 @@ public class Player : MonoBehaviour
     {
         health -= damage;
 
-        if (health == 2)
+        if (health == 1)
         {
             anim.SetTrigger("isDamaged");
-            Destroy(hearts[1]);
-            Debug.Log("help");
-
+            hearts[2].SetActive(false);
         }
-        if(health == 1)
+        if(health == 2)
         {
             anim.SetTrigger("isDamaged");
-            Destroy(hearts[0]);
+            hearts[1].SetActive(false);
         }
         if(health == 0)
         {
@@ -133,6 +131,20 @@ public class Player : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             ScoreManager.instance.GoldenBone(this);
+        }
+        if(collision.tag == "Heart")
+        {
+            health += 1;
+            if (health == 1)
+            {
+                collision.gameObject.SetActive(false);
+                hearts[0].SetActive(true);
+            }
+            if(health ==2)
+            {
+                collision.gameObject.SetActive(false);
+                hearts[1].SetActive(true);
+            }
         }
     }
 

@@ -8,6 +8,7 @@ public class SceneManagement : MonoBehaviour
 {
     public GameObject completionUI;
     public GameObject boneUI;
+    public GameObject dialogueUI;
     public int levelToUnlock;
     int numberOfUnlockedLevels;
     
@@ -29,6 +30,7 @@ public class SceneManagement : MonoBehaviour
                 {
             completionUI.SetActive(true);
             boneUI.SetActive(false);
+            dialogueUI.SetActive(true);
 
             numberOfUnlockedLevels = PlayerPrefs.GetInt("levelsUnlocked");
 
