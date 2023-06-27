@@ -8,7 +8,7 @@ namespace DialogueSystem
 {
     public class DialogueBaseClass : MonoBehaviour
     {
-        protected IEnumerator WriteText(string input, TextMeshProUGUI textHolder, Color textColor, float delay, AudioClip sound)
+        protected IEnumerator WriteText(string input, Text textHolder1, Color textColor1, TextMeshProUGUI textHolder, Color textColor, float delay, AudioClip sound)
         {
             textHolder.color = textColor;
 

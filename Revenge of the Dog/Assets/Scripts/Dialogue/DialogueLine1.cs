@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,7 @@ namespace DialogueSystem
 {
     public class DialogueLine : DialogueBaseClass
     {
+        internal bool finished;
         private Text textHolder;
 
         [Header ("Text Options")]
@@ -36,6 +38,11 @@ namespace DialogueSystem
         private void Start()
         {
             StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines));
+        }
+
+        private IEnumerator WriteText(string input, Text textHolder, Color textColor, Font textFont, float delay, AudioClip sound, float delayBetweenLines)
+        {
+            throw new NotImplementedException();
         }
     }
 }
