@@ -135,12 +135,12 @@ public class Player : MonoBehaviour
         if(collision.tag == "Heart")
         {
             health += 1;
-            if (health == 1)
+            if (health <= 1)
             {
                 collision.gameObject.SetActive(false);
                 hearts[0].SetActive(true);
             }
-            if(health ==2)
+            if(health <=2)
             {
                 collision.gameObject.SetActive(false);
                 hearts[1].SetActive(true);
