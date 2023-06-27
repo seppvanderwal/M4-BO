@@ -29,7 +29,6 @@ public class SceneManagement : MonoBehaviour
         if (coll.gameObject.CompareTag("Player"))
                 {
             completionUI.SetActive(true);
-            boneUI.SetActive(false);
             dialogueUI.SetActive(true);
 
             numberOfUnlockedLevels = PlayerPrefs.GetInt("levelsUnlocked");
