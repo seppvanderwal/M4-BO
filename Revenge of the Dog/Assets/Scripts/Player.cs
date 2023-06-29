@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
         else if (direction < 0f)
         {
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
-            //anim.SetTrigger("run");
+            anim.SetTrigger("run");
 
         }
         else
