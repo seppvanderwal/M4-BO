@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
         s = GetComponent<SpriteRenderer>();
         anim= GetComponent<Animator>();
 
-
         health = maxHealth;
     }
 
@@ -74,7 +73,7 @@ public class Player : MonoBehaviour
         }
         
 
-        Sprite();
+        FlipSprite();
         //Health system
         if (health <= 0)
         {
@@ -82,7 +81,7 @@ public class Player : MonoBehaviour
 
             if (timer > delay)
             {
-                SceneManager.LoadScene(6);
+                SceneManager.LoadScene("GameOver");
             }
         }
         IdleSwitch();
@@ -148,7 +147,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Sprite()
+    private void FlipSprite()
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
