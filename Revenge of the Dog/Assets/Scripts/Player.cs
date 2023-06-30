@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
 
             if (timer > delay)
             {
-                SceneManager.LoadScene("GameOver");
+                SceneManager.LoadScene("GameOver Screen");
             }
         }
         IdleSwitch();
@@ -150,7 +150,6 @@ public class Player : MonoBehaviour
     private void FlipSprite()
     {
         inputHorizontal = Input.GetAxisRaw("Horizontal");
-        inputVertical = Input.GetAxisRaw("Vertical");
 
         if (inputHorizontal > 0)
         {

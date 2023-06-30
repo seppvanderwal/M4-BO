@@ -5899,6 +5899,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 16.57
       objectReference: {fileID: 0}
+    - target: {fileID: 5520936784041075727, guid: 75777343f0854e247907f129b261bc81, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520936784041075727, guid: 75777343f0854e247907f129b261bc81, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520936784041075727, guid: 75777343f0854e247907f129b261bc81, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5783044183294393575, guid: 75777343f0854e247907f129b261bc81, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.99459994
@@ -9576,11 +9588,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3440987590734191548, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5919764
+      value: 0.79598844
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440987591812630717, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_ScreenY
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440987591812630717, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_DeadZoneWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440987591812630717, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_SoftZoneWidth
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440987591812630717, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_UnlimitedSoftZone
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3440987592434367287, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5919764
+      value: 0.79598844
       objectReference: {fileID: 0}
     - target: {fileID: 7631050135244573808, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_RootOrder

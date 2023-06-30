@@ -19,11 +19,11 @@ public class GameOver : MonoBehaviour
     //deze laden de specifieke scenes
     public void RestartButton()
     {
-        SceneManager.LoadScene(1); // laat de scene opnieuw beginnen
+        SceneManager.LoadScene("LevelSelection"); // laat de scene opnieuw beginnen
     }
 
     public void ExitButton()
     {
-        SceneManager.LoadScene(0); //brengt je naar het start scherm
+        SceneManager.LoadScene("Start screen"); //brengt je naar het start scherm
     }
 }

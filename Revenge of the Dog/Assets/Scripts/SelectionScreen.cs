@@ -13,27 +13,27 @@ public class SelectionScreen : MonoBehaviour
 
     public void Level1()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Level 1");
         //A.Stop();// stopt het muziek
     }
     public void Level2()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Level 2");
         //A.Stop();// stopt het muziek
     }
     public void Level3()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Level 3");
         //A.Stop();// stopt het muziek
     }
     public void Level4()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene("Level 4");
         //A.Stop();// stopt het muziek
     }
     public void MainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Start screen");
         //A.Stop();// stopt het muziek
     }
 }
