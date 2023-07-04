@@ -50,9 +50,9 @@ ScriptedImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
     normalMap: 0
     textureFormat: 0
     maxTextureSize: 0
@@ -120,7 +120,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 6812
+      y: 5422
       width: 2182
       height: 443
     spriteID: 10d002cb03f9b234b82afcffa1bc0408
@@ -132,7 +132,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -28, y: 6758}
+    uvTransform: {x: -28, y: 5368}
   - name: middel grond zand
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -183,7 +183,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 7263
+      y: 7653
       width: 2268
       height: 346
     spriteID: 68cedd0af27bc234481b8deed2173abf
@@ -195,7 +195,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 7047}
+    uvTransform: {x: 4, y: 7437}
   - name: 'bergen achter achter de bergen '
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -225,7 +225,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 6144
+      y: 6985
       width: 2268
       height: 660
     spriteID: bcf1ff033c235cf4aabe7c0703260d82
@@ -237,7 +237,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 6004}
+    uvTransform: {x: 4, y: 6845}
   - name: echt 2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -246,7 +246,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 5422
+      y: 6263
       width: 2268
       height: 714
     spriteID: 1e74ccd9f17826d41832008f10dc9446
@@ -258,7 +258,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 5196}
+    uvTransform: {x: 4, y: 6037}
   - name: Laag 10
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -267,7 +267,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 2280
-      y: 6144
+      y: 7653
       width: 552
       height: 530
     spriteID: 8cd420a8248f58f489d182e3c0d95afb
@@ -279,7 +279,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1730, y: 5799}
+    uvTransform: {x: 1730, y: 7308}
   - name: Laag 5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -401,7 +401,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 10d002cb03f9b234b82afcffa1bc0408
     layerID: 10
-    mosaicPosition: {x: 4, y: 6812}
+    mosaicPosition: {x: 4, y: 5422}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -431,7 +431,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 68cedd0af27bc234481b8deed2173abf
     layerID: 4
-    mosaicPosition: {x: 4, y: 7263}
+    mosaicPosition: {x: 4, y: 7653}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -451,7 +451,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: bcf1ff033c235cf4aabe7c0703260d82
     layerID: 7
-    mosaicPosition: {x: 4, y: 6144}
+    mosaicPosition: {x: 4, y: 6985}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -461,7 +461,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 1e74ccd9f17826d41832008f10dc9446
     layerID: 8
-    mosaicPosition: {x: 4, y: 5422}
+    mosaicPosition: {x: 4, y: 6263}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -471,7 +471,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 8cd420a8248f58f489d182e3c0d95afb
     layerID: 11
-    mosaicPosition: {x: 2280, y: 6144}
+    mosaicPosition: {x: 2280, y: 7653}
     flatten: 0
     isImported: 1
     isVisible: 1
