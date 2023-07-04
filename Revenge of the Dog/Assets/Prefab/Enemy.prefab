@@ -186,7 +186,7 @@ MonoBehaviour:
   patrolDestination: 0
   playerTransform: {fileID: 0}
   isChasing: 0
-  chaseDistance: 0
+  chaseDistance: 2
 --- !u!114 &2607289397815704035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   playerHealth: {fileID: 0}
+  attackSound: {fileID: 0}
 --- !u!95 &291797510351337803
 Animator:
   serializedVersion: 4

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public GameObject deathLocation;
+    [SerializeField] AudioSource[] music; 
 
     public GameObject[] hearts;
     public int maxHealth = 3;
@@ -16,8 +17,8 @@ public class Player : MonoBehaviour
     public float speed = 5f;
     private float direction = 0f;
 
-    private float inputHorizontal;
-    private float inputVertical;
+    private float inputHorizontal, inputVertical;
+    
 
     //Timer
     float delay = 3.0f;
@@ -68,6 +69,7 @@ public class Player : MonoBehaviour
         //Jumping
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            music[4].Play();
             anim.SetTrigger("Jump");
             anim.ResetTrigger("run");
         }
@@ -78,6 +80,7 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             timer += Time.deltaTime;
+            music[3].Play();
 
             if (timer > delay)
             {
@@ -100,11 +103,15 @@ public class Player : MonoBehaviour
         {
             anim.SetTrigger("isDamaged");
             hearts[2].SetActive(false);
+            //getHit.Play();
+            music[0].Play();
         }
         if(health == 2)
         {
             anim.SetTrigger("isDamaged");
             hearts[1].SetActive(false);
+            //getHit.Play();
+            music[0].Play();
         }
         if(health == 0)
         {
@@ -123,13 +130,16 @@ public class Player : MonoBehaviour
         if(collision.tag == "Bone")
         { 
             collision.gameObject.SetActive(false);
-            ScoreManager.instance.AddPoint(this);  
-            
+            ScoreManager.instance.AddPoint(this);
+            //boneCollection.Play();
+            music[1].Play();
         }
         if(collision.tag == "GoldenBone")
         {
             collision.gameObject.SetActive(false);
             ScoreManager.instance.GoldenBone(this);
+            // boneCollection.Play();
+            music[1].Play();
         }
         if(collision.tag == "Heart")
         {
@@ -138,11 +148,15 @@ public class Player : MonoBehaviour
             {
                 collision.gameObject.SetActive(false);
                 hearts[0].SetActive(true);
+                //healthPoint.Play();
+                music[2].Play();
             }
             if(health <=2)
             {
                 collision.gameObject.SetActive(false);
                 hearts[1].SetActive(true);
+                //healthPoint.Play();
+                music[2].Play();
             }
         }
     }
