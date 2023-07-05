@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+
     public Transform[] patrolPoints;
     public float moveSpeed;
     public int patrolDestination;
-
 
     public Transform playerTransform;
     public bool isChasing;
@@ -20,12 +20,12 @@ public class EnemyMovement : MonoBehaviour
         {
             if(transform.position.x > playerTransform.position.x)
             {
-                transform.localScale= new Vector3(-2.5f,2.5f,1);
+                transform.localScale= new Vector3(2.5f,2.5f,1);
                 transform.position += Vector3.left * moveSpeed * Time.deltaTime;
             }
             if (transform.position.x < playerTransform.position.x)
             {
-                transform.localScale = new Vector3(2.5f, 2.5f, 1);
+                transform.localScale = new Vector3(-2.5f, 2.5f, 1);
                 transform.position += Vector3.right * moveSpeed * Time.deltaTime;
 
             }
@@ -56,6 +56,13 @@ public class EnemyMovement : MonoBehaviour
                     patrolDestination = 0;
                 }
             }
+        } 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Circle")
+        {
+            Destroy(gameObject);
         }
     }
 }
