@@ -807,7 +807,7 @@ MonoBehaviour:
   hp: 50
   maxhp: 23
   damage: 1
-  animator: {fileID: 0}
+  animator: {fileID: 839402816}
 --- !u!95 &839402816
 Animator:
   serializedVersion: 4

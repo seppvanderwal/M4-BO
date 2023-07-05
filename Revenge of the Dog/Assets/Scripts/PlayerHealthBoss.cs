@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthBoss : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class PlayerHealthBoss : MonoBehaviour
     public int maxhp = 3;
     public int damage; 
     public Animator animator;
+
+    //Timer
+    float delay = 3.0f;
+    private float timer = 0.0f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -25,13 +31,21 @@ public class PlayerHealthBoss : MonoBehaviour
         {
             TakeDamage(damage);
             animator.SetTrigger("Spaceship_Damage");
+            
         }
     }
+
     private void Update()
     {
         if (hp <= 0)
         {
-            Destroy(this.gameObject);
+            timer += Time.deltaTime;
+            gameObject.SetActive(false);
+
+            if (timer > delay)
+            {
+                SceneManager.LoadScene("GameOver Screen");
+            }
         }
     }
 }

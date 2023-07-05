@@ -18,8 +18,7 @@ public class boss : MonoBehaviour
     public void TakeDamage(int damage)
     {
         hp -= damage;
-        animator.SetTrigger("TriggerDamage");
-        
+        animator.SetTrigger("TriggerDamage"); 
     }
    
     void Attack()
@@ -28,8 +27,7 @@ public class boss : MonoBehaviour
         {
             animator.SetInteger("Idle", Random.Range(0, 100));
             animator.SetInteger("Attack", Random.Range(0, 100));
-        }
-        
+        }  
     }  
 
 
@@ -39,7 +37,6 @@ public class boss : MonoBehaviour
         if (other.gameObject.tag == "Attack")
         {
             TakeDamage(damage);
-
         }
     }
 
@@ -47,12 +44,9 @@ public class boss : MonoBehaviour
     {
         Attack();
 
-       
-        
-
         if (hp <= 0)
         {
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

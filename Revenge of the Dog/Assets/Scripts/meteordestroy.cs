@@ -29,15 +29,15 @@ public class meteordestroy : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            Destroy(this.gameObject);
+
+            //Destroy(this.gameObject);
         }
     }
+
+    
     private void Update()
     {
-        if (hp <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+       
     }
 }
     
