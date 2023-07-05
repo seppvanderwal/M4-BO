@@ -368,7 +368,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 41f00860e291f2742a09b4c99238822c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -495,7 +495,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -674,6 +674,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &198339983 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3790630526659675084, guid: 3cbd0485ae129214397e63113b05eb14, type: 3}
+  m_PrefabInstance: {fileID: 1164802302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &228875932
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +736,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d9b01442fa9558046aa9ceb1f38566dd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.85
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1274,7 +1279,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.0010320544}
@@ -6721,7 +6726,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -11644,7 +11649,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -12162,6 +12167,7 @@ GameObject:
   - component: {fileID: 613761826}
   - component: {fileID: 613761825}
   - component: {fileID: 613761827}
+  - component: {fileID: 613761828}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -12248,10 +12254,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1064bc44c7327364589b0d566a261dab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completionUI: {fileID: 1309823284989222793, guid: 217e352807b1d494ea9886544a87867f, type: 3}
+  completionUI: {fileID: 1533868425}
   boneUI: {fileID: 1516873802}
-  dialogueUI: {fileID: 0}
+  dialogueUI: {fileID: 198339983}
   levelToUnlock: 3
+--- !u!60 &613761828
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613761824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.25, y: 0.25, z: 0.25, w: 0.25}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.4921875, y: 0.28515625}
+      - {x: 0.46875, y: 0.359375}
+      - {x: 0.421875, y: 0.421875}
+      - {x: 0.359375, y: 0.46875}
+      - {x: 0.28515625, y: 0.4921875}
+      - {x: -0.28515625, y: 0.4921875}
+      - {x: -0.359375, y: 0.46875}
+      - {x: -0.421875, y: 0.421875}
+      - {x: -0.46875, y: 0.359375}
+      - {x: -0.4921875, y: 0.28515625}
+      - {x: -0.4921875, y: -0.28515625}
+      - {x: -0.46875, y: -0.359375}
+      - {x: -0.421875, y: -0.421875}
+      - {x: -0.359375, y: -0.46875}
+      - {x: -0.28515625, y: -0.4921875}
+      - {x: 0.28515625, y: -0.4921875}
+      - {x: 0.359375, y: -0.46875}
+      - {x: 0.421875, y: -0.421875}
+      - {x: 0.46875, y: -0.359375}
+      - {x: 0.4921875, y: -0.28515625}
 --- !u!1 &637455618
 GameObject:
   m_ObjectHideFlags: 0
@@ -12511,7 +12562,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -12830,7 +12881,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -13140,7 +13191,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -13362,7 +13413,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -13744,7 +13795,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.0010320544}
@@ -13855,7 +13906,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -14381,7 +14432,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -19579,6 +19630,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1309823284989222789, guid: 217e352807b1d494ea9886544a87867f, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309823284989222789, guid: 217e352807b1d494ea9886544a87867f, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -19593,6 +19648,10 @@ PrefabInstance:
     - target: {fileID: 1309823285176843953, guid: 217e352807b1d494ea9886544a87867f, type: 3}
       propertyPath: m_text
       value: No
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309823285829042200, guid: 217e352807b1d494ea9886544a87867f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1309823286950896540, guid: 217e352807b1d494ea9886544a87867f, type: 3}
       propertyPath: m_text
@@ -19740,8 +19799,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3790630526659675075, guid: 3cbd0485ae129214397e63113b05eb14, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3790630526659675075, guid: 3cbd0485ae129214397e63113b05eb14, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3790630526659675084, guid: 3cbd0485ae129214397e63113b05eb14, type: 3}
       propertyPath: m_Name
@@ -20022,7 +20085,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -20740,7 +20803,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -21053,6 +21116,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4032377870328211782, guid: 09878c543729fbc4993beedbaa18b0da, type: 3}
   m_PrefabInstance: {fileID: 1516873801}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1533868425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1309823284989222793, guid: 217e352807b1d494ea9886544a87867f, type: 3}
+  m_PrefabInstance: {fileID: 1148760257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1538482194
 GameObject:
   m_ObjectHideFlags: 0
@@ -21207,7 +21275,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -21282,6 +21350,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 192975470450667519, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170600003232478005, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3440987590734191548, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.5919764
@@ -21340,11 +21416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7631050135244573808, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.3
+      value: 142.56
       objectReference: {fileID: 0}
     - target: {fileID: 7631050135244573808, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0058947
+      value: -1.36
       objectReference: {fileID: 0}
     - target: {fileID: 7631050135244573808, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21381,6 +21457,10 @@ PrefabInstance:
     - target: {fileID: 7631050135244573809, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_Name
       value: Laika 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986456059356366749, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
@@ -21442,7 +21522,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00048130006, y: -0.00048129633}
@@ -22443,7 +22523,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5196f14bce53d4409c1644f1260ff44, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

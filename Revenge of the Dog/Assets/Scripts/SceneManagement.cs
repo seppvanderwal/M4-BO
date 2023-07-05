@@ -21,18 +21,19 @@ public class SceneManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.CompareTag("Player"))
-                {
+        {
             completionUI.SetActive(true);
             dialogueUI.SetActive(true);
 
-            numberOfUnlockedLevels = PlayerPrefs.GetInt("levelsUnlocked");
 
+            numberOfUnlockedLevels = PlayerPrefs.GetInt("levelsUnlocked");
+            
             if (numberOfUnlockedLevels <= levelToUnlock)
             {
                 PlayerPrefs.SetInt("levelsUnlocked", numberOfUnlockedLevels + 1);

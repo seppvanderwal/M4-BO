@@ -658,7 +658,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 41f00860e291f2742a09b4c99238822c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2100,7 +2100,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d5cc57d8c212fc84d9e508311dc7d6f9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.85
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4821,7 +4821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3790630526659675084, guid: 3cbd0485ae129214397e63113b05eb14, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3790630526661700772, guid: 3cbd0485ae129214397e63113b05eb14, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6253,8 +6253,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 192975470450667519, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 192975470450667519, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170600003232478005, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2170600003232478005, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_PlayOnAwake
@@ -6391,6 +6399,10 @@ PrefabInstance:
     - target: {fileID: 7631050135244573809, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_Name
       value: Laika
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986456059356366749, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8986456059356366749, guid: d972d4ad300e1b14ca1a522059feb7ab, type: 3}
       propertyPath: m_PlayOnAwake
