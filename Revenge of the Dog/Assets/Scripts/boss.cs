@@ -12,32 +12,43 @@ public class boss : MonoBehaviour
     void Start()
     {
         hp = maxhp;
+        animator= GetComponent<Animator>();
     }
 
     public void TakeDamage(int damage)
     {
         hp -= damage;
+        animator.SetTrigger("TriggerDamage");
+        
     }
-
-    public void Phase2()
+   
+    void Attack()
     {
-       
-    }
+        if (hp > 25)
+        {
+            animator.SetInteger("Idle", Random.Range(0, 100));
+            animator.SetInteger("Attack", Random.Range(0, 100));
+        }
+        
+    }  
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Attack")
         {
             TakeDamage(damage);
+
         }
     }
 
     private void Update()
     {
-        if(hp <= 25)
-        {
-            Phase2();
-        }
+        Attack();
+
+       
+        
 
         if (hp <= 0)
         {
