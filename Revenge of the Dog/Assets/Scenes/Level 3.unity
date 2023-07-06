@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &74751129
 GameObject:
   m_ObjectHideFlags: 0
@@ -11717,6 +11718,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+--- !u!1001 &159999635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7998745924903788603, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_Name
+      value: Laika 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7998745924903788606, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37a98ad74e791e449941bf80a0c4b9c5, type: 3}
+>>>>>>> Valerie-Art
 --- !u!1 &558657421
 GameObject:
   m_ObjectHideFlags: 0
@@ -11835,6 +11895,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575077604
@@ -11869,6 +11930,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 558657422}
   m_RootOrder: 3
+=======
+  m_RootOrder: 2
+>>>>>>> Valerie-Art
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &575077606
 BoxCollider2D:
@@ -12458,6 +12522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 176ec9d166d01a5479a0d30537999b08, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 176ec9d166d01a5479a0d30537999b08, type: 3}
@@ -12471,6 +12536,9 @@ PrefabInstance:
     - target: {fileID: -7552582706839291426, guid: 176ec9d166d01a5479a0d30537999b08, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.0037
+=======
+      value: 0
+>>>>>>> Valerie-Art
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 176ec9d166d01a5479a0d30537999b08, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12984,6 +13052,7 @@ Transform:
   m_Father: {fileID: 1811263978}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &822370270
 GameObject:
   m_ObjectHideFlags: 0
@@ -13149,6 +13218,9 @@ Transform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854157476
+=======
+--- !u!1 &915164305
+>>>>>>> Valerie-Art
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13256,7 +13328,7 @@ SpriteRenderer:
   m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &896455131
@@ -13528,6 +13600,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958727352
@@ -21912,6 +21985,10 @@ Transform:
   m_Father: {fileID: 992508041}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Valerie-Art
 --- !u!1 &1743841460
 GameObject:
   m_ObjectHideFlags: 0
@@ -22020,7 +22097,7 @@ SpriteRenderer:
   m_Size: {x: 4, y: 0.37}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1759696167
@@ -22250,6 +22327,7 @@ Transform:
   - {fileID: 558657422}
   - {fileID: 2106335126}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2047460058
@@ -22672,6 +22750,9 @@ Transform:
   - {fileID: 456354387}
   m_Father: {fileID: 1012415182}
   m_RootOrder: 2
+=======
+  m_RootOrder: 3
+>>>>>>> Valerie-Art
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2106335125
 GameObject:
@@ -22717,6 +22798,7 @@ Transform:
   m_Father: {fileID: 1811263978}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &2110948092
 GameObject:
   m_ObjectHideFlags: 0
@@ -27640,3 +27722,5 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> Valerie-Art
