@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f144f8a64a5364147aa7a0ec0357f46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCam: {fileID: 1332279517}
+  playerCam: {fileID: 0}
   parallaxEffect: 0.2
 --- !u!212 &128432039
 SpriteRenderer:
@@ -1842,6 +1842,14 @@ PrefabInstance:
     - target: {fileID: 2607289397815704032, guid: a03fd36f750d443419519212bbab76d3, type: 3}
       propertyPath: m_Offset.y
       value: 0.0023340434
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607289397815704034, guid: a03fd36f750d443419519212bbab76d3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607289397815704034, guid: a03fd36f750d443419519212bbab76d3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2607289397815704034, guid: a03fd36f750d443419519212bbab76d3, type: 3}
       propertyPath: m_LocalPosition.x
