@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Bone
-  - GoldenBone
-  - Door
-  - Heart
-=======
-  - boss
-  - Attack
-  - meteor
->>>>>>> Valerie-Art
+  tags: []
   layers:
   - Default
   - TransparentFX
