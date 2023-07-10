@@ -8,6 +8,8 @@ public class boss : MonoBehaviour
     public int maxhp;
     public int damage;
     public Animator animator;
+
+    public GameObject ui;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,7 @@ public class boss : MonoBehaviour
 
         if (hp <= 0)
         {
+            ui.SetActive(true);
             gameObject.SetActive(false);
         }
     }

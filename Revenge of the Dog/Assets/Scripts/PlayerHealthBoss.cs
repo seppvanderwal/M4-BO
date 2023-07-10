@@ -11,7 +11,7 @@ public class PlayerHealthBoss : MonoBehaviour
     public Animator animator;
 
     //Timer
-    float delay = 3.0f;
+    float delay = 0.2f;
     private float timer = 0.0f;
 
     void Start()
@@ -30,11 +30,10 @@ public class PlayerHealthBoss : MonoBehaviour
         if (collider.gameObject.tag == "meteor")
         {
             TakeDamage(damage);
-            animator.SetTrigger("Spaceship_Damage");
-            
+            animator.SetBool("Spaceship_Damage", true);           
         }
     }
-
+        
     private void Update()
     {
         if (hp <= 0)
@@ -42,10 +41,10 @@ public class PlayerHealthBoss : MonoBehaviour
             timer += Time.deltaTime;
             gameObject.SetActive(false);
 
-            if (timer > delay)
-            {
-                SceneManager.LoadScene("GameOver Screen");
-            }
+            //if (timer > delay)
+            //{
+                SceneManager.LoadScene("Gameover");
+           // }
         }
     }
 }
